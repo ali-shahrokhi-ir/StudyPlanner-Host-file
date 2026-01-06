@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Result
+{% endblock %}
+
+<header>
+    {% block div1 %}
+        class="nav-link button letter" aria-current="page"
+    {% endblock %}
+
+    {% block div2 %}
+        class="nav-link"
+    {% endblock %}
+
+    {% block div3 %}
+        class="nav-link"
+    {% endblock %}
+
+    {% block div4 %}
+        class="nav-link"
+    {% endblock %}
+
+    {% block div5 %}
+        class="nav-link"
+    {% endblock %}
+</header>
+
+{% block main %}
+    <main>
+        <div class="container py-5">
+
+    <h1 class="fw-bold mb-4 text-center letter">
+        Your Personalized Study Plan
+    </h1>
+
+    <p class="text-center mb-5 letter">
+        This plan is generated based on your available time and academic performance.
+    </p>
+
+    <div class="row g-4">
+        {% for lesson in plan %}
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h4 class="card-title fw-bold mb-3">
+                        {{ lesson.name }}
+                    </h4>
+
+                    <p class="card-text">
+                        <strong>Study Time:</strong><br>
+                        {{ lesson.study_time }}
+                    </p>
+
+                    <p class="card-text text-muted small mt-3">
+                        Score: {{ lesson.score }} / {{ lesson.total_score }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="text-center mt-5">
+        <a href="/form" class="btn btn-primary px-4 py-2">
+            Create Another Plan
+        </a>
+    </div>
+
+</div>
+    </main>
+{% endblock %}

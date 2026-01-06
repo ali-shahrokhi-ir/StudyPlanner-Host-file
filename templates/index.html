@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title%}
+    Study Planner
+{% endblock %}
+
+<header>
+    {% block div1 %}
+        class="nav-link button letter" aria-current="page"
+    {% endblock %}
+
+    {% block div2 %}
+        class="nav-link"
+    {% endblock %}
+
+    {% block div3 %}
+        class="nav-link"
+    {% endblock %}
+
+    {% block div4 %}
+        class="nav-link"
+    {% endblock %}
+
+    {% block div5 %}
+        class="nav-link"
+    {% endblock %}
+</header>
+
+{% block main %}
+    <main>
+        <div>
+            <div class="container col-xxl-8 px-4 py-5 letter">
+                <div class="col-lg-6">
+                     <h1 class="display-5 fw-bold  lh-1 mb-3 letter">Are You Having Problems With Your Lessons?</h1>
+                      <p class="lead">Well, If your anwser to this question is yes, your are in the right place! <br> We made this Web-app for people who they have problems with studying their lesson. As we all did But, the solution is in front of our eyes. we just have to open our eyes and take a good look at the monitor!!! </BR> "Every Student Knows What They Have To Study For <BR> But They Do Not Know How...</BR></p>
+                       <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <a method = "GET" href="/form"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2 button">Start Using Study Planner</button></a>
+                        </div>
+                </div>
+             </div>
+        </div>
+
+        <div class="letter">
+            <div class="container px-4 py-5" id="hanging-icons">
+                 <h2 class="pb-2 border-bottom fw-bold letter">Features</h2>
+                  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                     <div class="col d-flex align-items-start">
+                         <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                         </div> 
+                         <div> 
+                            <h3 class="fs-2 letter lead fw-bold">Planning Based On your Score</h3> <p>Our UI Uses your Scores For Each Subject And Makes a Great Plan Personal For You!</p> <a method = "GET" href="/form" class="btn btn-primary button">Try</a> </div> </div> <div class="col d-flex align-items-start"> <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3"> </div> <div> 
+                                <h3 class="fs-2 letter lead fw-bold">Planning Based On your Time</h3> <p>We make the best use of the time you give us and you can study your lessons in the most optimal way.</p> <a method = "GET" href="/form" class="btn btn-primary button">Start</a> </div> </div> <div class="col d-flex align-items-start"> <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">  </div> <div> 
+                                    <h3 class="fs-2 letter lead fw-bold">Made By a Student For Students!</h3> <p>I used to have a lot of Problem while studying and then i asked myself, I can create a ....</p> <a method = "GET" href="/about" class="btn btn-primary button">More</a> 
+                                </div> 
+                            </div> 
+                        </div> 
+                    </div>
+                </div>
+    </main>
+{% endblock %}

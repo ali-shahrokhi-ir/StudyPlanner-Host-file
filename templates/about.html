@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    About
+{% endblock %}
+
+<header>
+    {% block div1 %}
+        class="nav-link"
+    {% endblock %}
+
+    {% block div2 %}
+        class="nav-link"
+    {% endblock %}
+
+    {% block div3 %}
+        class="nav-link"
+    {% endblock %}
+
+    {% block div4 %}
+        class="nav-link"
+    {% endblock %}
+
+    {% block div5 %}
+        class="nav-link button letter" aria-current="page"
+    {% endblock %}
+</header>
+
+{% block main %}
+    <main class="container py-5 letter">
+        <h1 class="fw-bold mb-4">About</h1>
+        <p class="lead">Well, Everything starts from a snowy day in 2012, I was born in Tehran,Iran and i used to have a great childhood with my cousin, but one day when i was in 4th grade, my friend told me that his older brother is a programmer and i had no idea what that means then i joined a group chat with them and i  heard word like "Python", "Print", "Bootstrap" blah blah. and that turned a light in my mind on and everything started...
+            <br>
+            But I always had problem while studying and planning for it, so i decided to make an app to make studying easier but not just for me but any student. instead of building something complex, I focused on building something simple but polished and useful.
+            <br>
+            -Thanks...
+            <br>
+            Check <a class="nav-link" method = "GET" href="/faq"> FAQs </a>If there is any question.
+        </p>
+    </main>
+{% endblock %}

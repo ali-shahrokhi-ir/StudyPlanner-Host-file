@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    FAQs
+{% endblock %}
+
+<header>
+    {% block div1 %}
+        class="nav-link"
+    {% endblock %}
+
+    {% block div2 %}
+        class="nav-link"
+    {% endblock %}
+
+    {% block div3 %}
+        class="nav-link"
+    {% endblock %}
+
+    {% block div4 %}
+        class="nav-link button letter" aria-current="page"
+    {% endblock %}
+
+    {% block div5 %}
+        class="nav-link"
+    {% endblock %}
+</header>
+
+{% block main %}
+    <main class="container py-5 letter">
+        <h1 class="fw-bold mb-4">FAQs</h1>
+        <br>
+        <br>
+        <h3 class="fw-bold mb-4">How does Study Planner create my schedule?</h3>
+        <p>Study Planner analyzes your available time and your scores for each subject, then uses a weighted algorithm to distribute your study time in a balanced and goal-oriented way.</p>
+        <br>
+
+        <h3 class="fw-bold mb-4">Do I need to manually set priorities for my lessons?</h3>
+        <p>No. Priorities are calculated automatically based on your performance, so you don't need to guess which subject is more important.</p>
+        <br>
+
+        <h3 class="fw-bold mb-4">Why do some subjects get more study time than others?</h3>
+        <p>Subjects with lower scores require more attention. The system allocates more time to areas where improvement is needed most.</p>
+        <br>
+
+        <h3 class="fw-bold mb-4">Can any subject receive zero study time?</h3>
+        <p>No. Every subject always receives a minimum amount of study time to ensure balanced learning.</p>
+        <br>
+
+        <h3 class="fw-bold mb-4">What happens if I have very limited free time?</h3>
+        <p>The planner still distributes your time fairly by maintaining proportional allocation and minimum study durations.</p>
+        <br>
+
+        <h3 class="fw-bold mb-4">Can I change my plan later?</h3>
+        <p>Yes. You can regenerate your study plan at any time by updating your scores or available time.</p>
+        <br>
+
+        <h3 class="fw-bold mb-4">Is my data stored permanently?</h3>
+        <p>Currently, your data is only used to generate your study plan. Future versions may include optional data storage for long-term tracking.</p>
+        <br>
+
+        <h3 class="fw-bold mb-4">Who is this application designed for?</h3>
+        <p>Study Planner is designed for students who know what they need to study but struggle with time management and prioritization.</p>
+        <br>
+
+        <h3 class="fw-bold mb-4">Is Study Planner suitable for all educational levels?</h3>
+        <p>Yes. The algorithm is flexible and works for different subjects, scoring systems, and study loads.</p>
+    </main>
+{% endblock %}

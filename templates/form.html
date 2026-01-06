@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Form
+{% endblock %}
+
+<header>
+    {% block div1 %}
+        class="nav-link"
+    {% endblock %}
+
+    {% block div2 %}
+        class="nav-link button letter" aria-current="page"
+    {% endblock %}
+
+    {% block div3 %}
+        class="nav-link"
+    {% endblock %}
+
+    {% block div4 %}
+        class="nav-link"
+    {% endblock %}
+
+    {% block div5 %}
+        class="nav-link"
+    {% endblock %}
+</header>
+
+{% block main %}
+    <main>
+        <div class="container py-5 letter">
+
+    <h1 class="fw-bold mb-4">Create Your Study Plan</h1>
+
+    <form method="post" action="/result">
+
+        <div class="mb-3">
+            <label class="form-label">Free Time (HH:MM)</label>
+            <input type="text"
+                   class="form-control"
+                   name="free_time"
+                   placeholder="Example = 10:30"
+                   required>
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label">Total Score (For All Lessons)</label>
+            <input type="number"
+                   class="form-control"
+                   name="total_score"
+                   placeholder="Example = 100, 20"
+                   min="1"
+                   required>
+        </div>
+
+        <h4 class="mb-3">Lessons</h4>
+
+        <div id="lessons">
+
+            <div class="row mb-2 lesson">
+                <div class="col">
+                    <input type="text"
+                           class="form-control"
+                           name="lesson_name"
+                           placeholder="Lesson name"
+                           required>
+                </div>
+
+                <div class="col">
+                    <input type="number"
+                           class="form-control"
+                           name="score"
+                           placeholder="Your score"
+                           required>
+                </div>
+            </div>
+
+        </div>
+
+        <button type="button" class="btn btn-secondary mb-3" onclick="addLesson()">
+            + Add another lesson
+        </button>
+
+        <br>
+
+        <button type="submit" class="btn btn-primary button btn-lg">
+            Generate Study Plan
+        </button>
+
+    </form>
+</div>
+    </main>
+{% endblock %}
